@@ -24,7 +24,7 @@ MAX_CHARS = 160
 def main() -> int:
     note = PATCH_NOTE
 
-    # Validate: single line, 1-160 characters, not only whitespace.
+    # The note must be one line, 1-160 chars, with no surrounding spaces.
     if not note or note != note.strip():
         print("error: patch note must not be empty or padded with whitespace", file=sys.stderr)
         return 1
